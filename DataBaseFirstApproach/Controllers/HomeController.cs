@@ -17,7 +17,8 @@ namespace DataBaseFirstApproach.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var data = context.Students.ToList();
+            return View(data);
         }
 
         public IActionResult Privacy()
